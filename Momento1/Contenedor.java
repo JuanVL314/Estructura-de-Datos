@@ -8,7 +8,9 @@ public class Contenedor {
 
     private static Random r = new Random();
 
-    public Contenedor(String origen) {
+    String[] paises = {"China", "USA", "Brasil", "Colombia"};
+
+    public Contenedor() {
 
         int minId = 1000;
         int maxId = 9999;
@@ -16,11 +18,10 @@ public class Contenedor {
         int minPeso = 500;
         int maxPeso = 5000;
 
-        this.id = r.nextInt((maxId - minId + 1)) + minId;
+        id = r.nextInt((maxId - minId + 1)) + minId;
+        peso = r.nextInt((maxPeso - minPeso + 1)) + minPeso;
 
-        this.peso = r.nextInt((maxPeso - minPeso + 1)) + minPeso;
-
-        this.origen = origen;
+        origen = paises[r.nextInt(paises.length)];
     }
 
     public int getId() {
