@@ -1,4 +1,3 @@
-
 public class Muelle {
 
     private Contenedor[][] matriz = new Contenedor[10][10];
@@ -40,6 +39,7 @@ public class Muelle {
                     System.out.println(matriz[i][j]);
                     total += matriz[i][j].getPeso();
                 }
+              
             }
         }
 
