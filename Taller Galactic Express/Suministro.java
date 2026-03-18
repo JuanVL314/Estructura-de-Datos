@@ -1,8 +1,8 @@
 public class Suministro {
 
-    String id;
-    int nivelEnergia;
-    String prioridad;
+    private String id;
+    private int nivelEnergia;
+    private String prioridad;
 
     public Suministro(String id, int nivelEnergia, String prioridad) {
         this.id = id;
@@ -10,13 +10,21 @@ public class Suministro {
         this.prioridad = prioridad;
     }
 
-    @Override
-    public String toString() {
-        return "Suministro{" +
-                "id='" + id + '\'' +
-                ", nivelEnergia=" + nivelEnergia +
-                ", prioridad='" + prioridad + '\'' +
-                '}';
+    public String getId() {
+        return id;
     }
 
+    public int getNivelEnergia() {
+        return nivelEnergia;
+    }
+
+    public String getPrioridad() {
+        return prioridad;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + " | Energía: " + nivelEnergia + " | Prioridad: " + prioridad;
+
+    }
 }
